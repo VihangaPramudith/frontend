@@ -3,8 +3,6 @@ import PurchaseRequisition from "./PurchaseRequisition";
 
 export default function PurchaseRequisitions(props) {
 
-    console.log(props);
-
   return (
     <React.Fragment>
       <div className="container" style={{ marginTop: "30px", color: "black" }}>
@@ -13,7 +11,6 @@ export default function PurchaseRequisitions(props) {
         </h2>
         <div>
           {props.data.map((data, index) => {
-            console.log(index);
             return <PurchaseRequisition key={index} data={data} number= {index}/>;
           })}
         </div>

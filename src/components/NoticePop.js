@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { acceptOrRejectCustomerApprovalPendingSoq } from "../services/Procurement_Construction_Site_Management";
 export default function NoticePop(props) {
-  console.log(props);
 
   const [inputField, setInputField] = useState({
     supplierOrderQuotationId: props.data.order.id,
@@ -12,11 +11,9 @@ export default function NoticePop(props) {
 
   const inputsHandler = (e) => {
     setInputField({ ...inputField, [e.target.name]: e.target.value });
-    console.log(inputField);
   };
 
   const submitButton = async () => {
-    console.log(inputField);
 
     const data = inputField;
 
@@ -28,6 +25,7 @@ export default function NoticePop(props) {
           rejectedReason: "",
           command: "",
         });
+        window.location.reload();
       })
       .catch((err) => {
         console.log(err);

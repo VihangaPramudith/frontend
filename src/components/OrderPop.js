@@ -3,7 +3,6 @@ import NoticePop from "./NoticePop";
 import { acceptOrRejectCustomerApprovalPendingSoq } from "../services/Procurement_Construction_Site_Management";
 
 export default function OrderPop(props) {
-  console.log(props);
 
   const [popup, setPopUp] = useState(false);
   const [inputField, setInputField] = useState({
@@ -15,12 +14,9 @@ export default function OrderPop(props) {
 
   const onSubmit = async () => {
     const data = inputField;
-
-    console.log(data);
-
     await acceptOrRejectCustomerApprovalPendingSoq(data)
       .then(() => {
-        alert("done");
+        window.location.reload();
       })
       .catch((err) => {
         console.log(err);

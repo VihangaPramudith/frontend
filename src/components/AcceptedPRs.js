@@ -27,14 +27,10 @@ export default class AcceptedPRs extends Component {
     }else {
       supplierId = 1;
     }
-
-    console.log(supplierId);
-
     getAllCustomerAndSupplierAcceptedPurchaseRequisitions(supplierId).then((res) => {
       this.setState({
         requisitions: res.data
       })
-      console.log(this.state);
     }).catch((err) => {
       console.log(err);
     })

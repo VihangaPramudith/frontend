@@ -146,7 +146,7 @@ export default class SideBar extends Component {
           <br />
           <br />
 
-          <Link to="/login">
+          <Link to="">
             <FiLogOut color="black" size="4em" />
             <button
               type="button"

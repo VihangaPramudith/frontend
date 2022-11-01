@@ -69,7 +69,7 @@ export default function Login() {
           {renderErrorMessage("pass")}
         </div>
         <div className="button-containerone">
-          <input style={{marginTop: "10px",cursor: "pointer",fontSize: "15px",background: "#01d28e", border: "1px solid #01d28e",color: "#fff",padding: "10px 20px"}} type="submit" />
+          <input style={{ marginTop: "10px",cursor: "pointer",fontSize: "15px",background: "#01d28e", border: "1px solid #01d28e",color: "#fff",padding: "10px 20px"}} type="submit" />
         </div>
       </form>
     </div>
@@ -79,7 +79,7 @@ export default function Login() {
     <div className="appone" style={{color: "black"}}>
       <div className="login-formone">
         <div className="titleone">Sign In</div>
-        {isSubmitted ? <Navigate to= '/profile' /> : renderForm}
+        {isSubmitted ? <Navigate to= '/profile' refresh="true"/> : renderForm}
       </div>
     </div>
   );

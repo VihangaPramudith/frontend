@@ -10,7 +10,6 @@ export default function Requisitions(props) {
         </h2>
         <div className="requisitions">
           {props.data.map((data, index) => {
-            console.log(index);
             return <Requisition key={index} data={data} number= {index}/>;
           })}
         </div>

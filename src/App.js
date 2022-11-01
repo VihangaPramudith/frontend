@@ -17,7 +17,7 @@ function App() {
       <Header />
       <SideBar />
       <Routes>
-        <Route path="/login" element={<Login />} />
+        <Route path="" element={<Login />} />
         <Route path="/approved" element={<ApprovedPRs />} />
         <Route path="/accepted" element={<AcceptedPRs />} />
         <Route path="/recieved" element={<RecievedPRs />} />

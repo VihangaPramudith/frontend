@@ -36,7 +36,6 @@ export default class ApprovedPRs extends Component {
       this.setState({
         requisitions: res.data
       })
-      console.log(this.state);
     }).catch((err) => {
       console.log(err);
     })
@@ -46,14 +45,11 @@ export default class ApprovedPRs extends Component {
 
   async onSubmit(id) {
 
-    console.log(id);
-
     this.setState({
       popup: true,
     })
 
     await acceptCustomerAcceptedPurchaseRequisition(id).then(() => {
-      console.log(id);
     }).catch((err) => console.log(err));
   };
 

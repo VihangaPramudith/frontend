@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { acceptCustomerApprovedPurchaseRequisition } from "../services/Procurement_Construction_Site_Management";
 
 function Popup(props) {
-  console.log(props);
 
   const [inputField, setInputField] = useState({
     supplierId: props.supplierId,
@@ -18,7 +17,6 @@ function Popup(props) {
   };
 
   const submitButton = async () => {
-    console.log(inputField);
 
     const data = inputField;
 
@@ -30,13 +28,12 @@ function Popup(props) {
           brand: "",
           dateCanDeliver: "",
         });
+        window.location.reload();
       })
       .catch((err) => {
         console.log(err);
       });
   };
-
-  console.log(inputField);
 
   return props.trigger ? (
     <div className="popup">

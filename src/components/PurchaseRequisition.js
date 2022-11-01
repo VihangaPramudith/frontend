@@ -5,8 +5,6 @@ import OrderPop from "./OrderPop";
 
 export default function PurchaseRequisition(props) {
 
-    console.log(props);
-
     const [popup, setPopup] = useState(false)
 
   return (

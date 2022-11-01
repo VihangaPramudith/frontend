@@ -21,7 +21,6 @@ export default class RecievedPRs extends Component {
     await getAllCustomerApprovedPurchaseRequisitions()
       .then((res) => {
         this.setState({ requisitions: res.data });
-        console.log(res.data);
       })
       .catch((err) => {
         console.log(err);

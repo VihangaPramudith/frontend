@@ -2,7 +2,6 @@ import React from "react";
 import image4 from "../images/image4.png";
 import { Link } from "react-router-dom";
 
-
 export default function ApprovedPop(props) {
   return props.trigger ? (
     <div className="popup">
@@ -21,6 +20,7 @@ export default function ApprovedPop(props) {
               marginTop: "50px",
               fontSize: "25px",
             }}
+            onClick={window.location.reload()}
           >
             <b>OK</b>
           </button>

@@ -5,8 +5,6 @@ import Popup from "./Popup";
 
 export default function Requisition(props) {
 
-    console.log(props);
-
     const[popup, setPopup] = useState(false)
 
   return (
