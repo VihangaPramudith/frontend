@@ -1,0 +1,18 @@
+[
+  {
+    "supplierId": 1,
+    "reference": 1223,
+    "item": "sand",
+    "quantity": 5,
+    "address": "kalutara",
+    "date": "2018-01-01"
+  },
+  {
+    "supplierId": 2,
+    "reference": 12213,
+    "item": "sand",
+    "quantity": 5,
+    "address": "kalutara",
+    "date": "2018-01-01"
+  }
+]
