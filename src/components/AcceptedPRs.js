@@ -123,7 +123,7 @@ export default class AcceptedPRs extends Component {
                       style={{
                         height: "60px",
                         width: "180px",
-                        position: "fixed",
+                        position: "absolute",
                         marginLeft: "950px",
                         marginTop: "-140px",
                         borderRadius: "75px",
@@ -142,7 +142,7 @@ export default class AcceptedPRs extends Component {
                       style={{
                         height: "60px",
                         width: "180px",
-                        position: "fixed",
+                        position: "absolute",
                         marginLeft: "950px",
                         marginTop: "-60px",
                         borderRadius: "75px",

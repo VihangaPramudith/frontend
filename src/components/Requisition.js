@@ -37,7 +37,7 @@ export default function Requisition(props) {
                       </th>
                       <td>{props.data.id}</td>
                       <th>
-                        &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Delivery Date:
+                        Delivery Date:
                       </th>
                       <td>{props.data.orderRequiredDate}</td>
                     </tr>

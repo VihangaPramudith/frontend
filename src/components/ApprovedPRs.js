@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ApprovedPop from "./ApprovedPop";
-import { getAllCustomerApprovedPRs, acceptCustomerAcceptedPurchaseRequisition } from "../../src/services/Procurement_Construction_Site_Management";
+import { getAllCustomerApprovedPRs } from "../../src/services/Procurement_Construction_Site_Management";
 
 export default class ApprovedPRs extends Component {
   constructor(props) {
@@ -40,15 +40,15 @@ export default class ApprovedPRs extends Component {
 
   }
 
-  async onSubmit(id) {
+  // async onSubmit(id) {
 
-    this.setState({
-      popup: true,
-    })
+  //   this.setState({
+  //     popup: true,
+  //   })
 
-    await acceptCustomerAcceptedPurchaseRequisition(id).then(() => {
-    }).catch((err) => console.log(err));
-  };
+  //   await acceptCustomerAcceptedPurchaseRequisition(id).then(() => {
+  //   }).catch((err) => console.log(err));
+  // };
 
   async filterData(topics, searchKey) {}
 
@@ -142,12 +142,17 @@ export default class ApprovedPRs extends Component {
                           marginTop: "-125px",
                           borderRadius: "75px",
                         }}
-                        onClick={() => this.onSubmit(data.id)}
+                        //onClick={() => this.onSubmit(data.id)}
+                        onClick = {() => {
+                          this.setState({
+                            popup: true,
+                          })
+                        }}
                       >
                         <b>Accept</b>
                       </button>
                     </tr>
-                    <ApprovedPop trigger={this.state.popup} />
+                    <ApprovedPop trigger={this.state.popup} data={data} />
                   </table>
                 </div>
               );
