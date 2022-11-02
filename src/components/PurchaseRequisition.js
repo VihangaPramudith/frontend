@@ -70,7 +70,7 @@ export default function PurchaseRequisition(props) {
                         }}
                         onClick={() => setPopup(true)}
                       >
-                        <b>View Order</b>
+                        <b style={{fontSize: "22px"}}>View Order</b>
                       </button>
                     </tr>
                     <OrderPop trigger={popup} data={props.data}/>

@@ -3,6 +3,7 @@ import image4 from "../images/image4.png";
 import { Link } from "react-router-dom";
 
 export default function ApprovedPop(props) {
+  console.log(props);
   return props.trigger ? (
     <div className="popup">
       <div className="popup-innertwo">

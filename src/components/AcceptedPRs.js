@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import { getAllCustomerAndSupplierAcceptedPurchaseRequisitions } from "../services/Procurement_Construction_Site_Management";
-
 
 export default class AcceptedPRs extends Component {
   constructor(props) {
@@ -17,23 +16,25 @@ export default class AcceptedPRs extends Component {
   }
 
   async retrieveRequisitions() {
-
     let supplierId;
 
     let user = localStorage.getItem("type");
 
     if (user === "user1") {
       supplierId = 2;
-    }else {
+    } else {
       supplierId = 1;
     }
-    getAllCustomerAndSupplierAcceptedPurchaseRequisitions(supplierId).then((res) => {
-      this.setState({
-        requisitions: res.data
+    getAllCustomerAndSupplierAcceptedPurchaseRequisitions(supplierId)
+      .then((res) => {
+        this.setState({
+          requisitions: res.data,
+        });
+        console.log(this.state.requisitions);
       })
-    }).catch((err) => {
-      console.log(err);
-    })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 
   async filterData(topics, searchKey) {}
@@ -41,7 +42,6 @@ export default class AcceptedPRs extends Component {
   handleSearchArea = async (e) => {};
 
   render() {
-
     return (
       <React.Fragment>
         <div
@@ -49,7 +49,7 @@ export default class AcceptedPRs extends Component {
           style={{ marginTop: "30px", color: "black" }}
         >
           <h2 style={{ color: "black", marginLeft: "400px" }}>
-            <b>Approved Purchase Requisitions</b>
+            <b>Accepted Purchase Requisitions</b>
           </h2>
 
           <div
@@ -93,22 +93,29 @@ export default class AcceptedPRs extends Component {
                       borderSpacing: ".2em",
                     }}
                   >
-                    <br/>
+                    <br />
                     <tr>
-                      <th>{index + 1}. Reference No:</th>
-                      <td>{data.order.id}</td>
+                      <td>
+                        {index + 1}.
+                        <span style={{ fontSize: "30px" }}>&#9745;</span>
+                        <span className="dot"></span>
+                        <b>Reference No: </b>{data.id}
+                      </td>
+                      <td>
+                        <b>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Delivery Date: </b>{data.deliverableDate}
+                      </td>
                     </tr>
                     <tr>
-                      <th>&nbsp;&nbsp;&nbsp;&nbsp;Item :</th>{" "}
+                      <th>&emsp;&emsp;&emsp;Item :</th>
                       <td>{data.order.orderName}</td>
                     </tr>
                     <tr>
-                      <th>&nbsp;&nbsp;&nbsp;&nbsp;Quantity :</th>{" "}
+                      <th>&emsp;&emsp;&emsp;Quantity :</th>
                       <td>{data.deliverableAmount}</td>
                     </tr>
                     <tr>
-                      <th>&nbsp;&nbsp;&nbsp;&nbsp;Delivery Address :</th>{" "}
-                      <td>{data.order.orderRequiredDate}</td>
+                      <th>&emsp;&emsp;&emsp;Delivery Address :</th>
+                      <td>{data.order.deliveryAddress}</td>
                     </tr>
                     <button
                       type="button"

@@ -38,7 +38,7 @@ export default function OrderPop(props) {
         >
           <b>Reference No:{props.data.id}</b>
         </div>
-        <div className="table">
+        <div className="table" style={{fontSize: "30px"}}>
           <tr>
             <td>
               <b>
@@ -111,7 +111,7 @@ export default function OrderPop(props) {
             position: "fixed",
             borderRadius: "75px",
             marginLeft: "750px",
-            marginTop: "100px",
+            marginTop: "80px",
             fontSize: "25px",
           }}
           onClick={() => setPopUp(true)}
@@ -127,7 +127,7 @@ export default function OrderPop(props) {
             position: "fixed",
             borderRadius: "75px",
             marginLeft: "950px",
-            marginTop: "100px",
+            marginTop: "80px",
             fontSize: "25px",
           }}
           onClick={onSubmit}

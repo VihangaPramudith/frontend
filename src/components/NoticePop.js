@@ -45,7 +45,8 @@ export default function NoticePop(props) {
             height: "100px",
           }}
         >
-          <b style={{ color: "yellow" }}>Rejection Reason</b>
+          <b style={{ color: "yellow" }}>Rejection Reason</b><span style={{ color: "white", fontSize: "50px" }}>&#9998;</span>
+
         </div>
         <table style={{ marginLeft: "10px", fontSize: "15px" }}>
           <br />
@@ -83,7 +84,7 @@ export default function NoticePop(props) {
                 type="text"
                 name="rejectedReason"
                 style={{
-                  height: "150px",
+                  height: "60px",
                   backgroundColor: "#f1f1f1",
                   position: "relative",
                   fontSize: "25px",
@@ -103,7 +104,7 @@ export default function NoticePop(props) {
               width: "150px",
               position: "fixed",
               marginLeft: "190px",
-              marginTop: "20px",
+              marginTop: "100px",
               fontSize: "25px",
             }}
             onClick={submitButton}

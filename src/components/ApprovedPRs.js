@@ -14,9 +14,6 @@ export default class ApprovedPRs extends Component {
     
   }
 
-
-  
-
   componentDidMount() {
     this.retrieveRequisitions();
   }

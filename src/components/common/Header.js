@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import image3 from "../../images/image3.png";
 import image5 from "../../images/image5.png";
 
-
 export default class Header extends Component {
   render() {
     const user1 = (
