@@ -3,10 +3,10 @@ import { acceptOrRejectCustomerApprovalPendingSoq } from "../services/Procuremen
 export default function NoticePop(props) {
 
   const [inputField, setInputField] = useState({
-    supplierOrderQuotationId: props.data.order.id,
+    supplierOrderQuotationId: props.data.id,
     rejectedDate: new Date().toISOString().split("T")[0],
     rejectedReason: "",
-    command: true,
+    command: false,
   });
 
   const inputsHandler = (e) => {

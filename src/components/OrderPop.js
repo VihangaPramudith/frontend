@@ -4,13 +4,19 @@ import { acceptOrRejectCustomerApprovalPendingSoq } from "../services/Procuremen
 
 export default function OrderPop(props) {
 
+  console.log(props);
+
   const [popup, setPopUp] = useState(false);
   const [inputField, setInputField] = useState({
-    supplierOrderQuotationId: props.data.order.id,
+    supplierOrderQuotationId: props.data.id,
     rejectedDate: new Date().toISOString().split("T")[0],
     rejectedReason: "",
-    command: false,
+    command: true,
   });
+
+
+  console.log(inputField);
+
 
   const onSubmit = async () => {
     const data = inputField;
